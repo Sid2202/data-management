@@ -1,13 +1,21 @@
 import http from "../http-common";
+import axios from "axios";
+var apiii=axios.create({
+  baseURL: "http://localhost:8080/api",
+  headers: {
+    "Content-type": "application/json",
+  }
+})
 class TutorialDataService {
   getAll() {
-    return http.get("/tutorials");
+    console.log("heyyyyy")
+    return apiii.get("/tutorials");
   }
   get(id) {
     return http.get(`/tutorials/${id}`);
   }
   create(data) {
-    return http.post("/tutorials", data);
+    return apiii.post("/tutorials", data);
   }
   update(id, data) {
     return http.put(`/tutorials/${id}`, data);

@@ -5,6 +5,7 @@ import {BrowserRouter as Router,
 import {useState, useEffect} from 'react'
 import Menu from "./Menu"
 import Customer from "./Customer"
+import Home from "./Home"
 
 import "./App.css";
 
@@ -16,14 +17,13 @@ function App(props) {
   
   return (
     <Router>
-        <p><Link to ="/customer">Heyy! Welcome! </Link></p>
-      <div className="routes">
-          <Routes>
-            <Route exact path="/menu" element={<Menu data={cid} />} />
-            <Route exact path="/customer" element={<Customer />} />
-          </Routes>
-        </div>
-  </Router>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        {/* <Route exact path="/menu" element={<Menu data={cid} />} /> */}
+        <Route exact path="/menu" element={<Menu/>} />
+        <Route exact path="/customer" element={<Customer/>} />
+      </Routes>
+    </Router>
   );
 }
 

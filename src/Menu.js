@@ -15,6 +15,8 @@ function Menu(props) {
     const [q3, setQ3] = useState(0);
     const [q4, setQ4] = useState(0);
 
+    const cid = props.cid;
+
     const Cards = [
         {
           id: 0,
@@ -116,14 +118,16 @@ function Menu(props) {
         }
       }
   return (
-    <div>
-        <div>
-          <div className="p-3">
-            <p className="text-3xl font-semibold">Hungry Panda</p>
+    <div className="h-full p-2 w-screen bg-yellow-500 flex flex-col justify-center items-center p-4">
+        <div className=''>
+          {/* menu page is cid is: {cid} */}
+          <div className="p-4 mt-4 flex-col itmes-center text-wh text-center">
+            <p className="text-3xl font-semibold ">Hungry Panda</p>
+            <h6 className='text-lg'>Grab your favourite meal here!🍽</h6>
           </div>
 
-          <div className="flex flex-col ">
-            <h6>Grab your favourite meal here!</h6>
+          <div className="flex flex-col justify-center items-center mt-6">
+            
             {/* {Cards.map((item) => (
               <Card
                 key={item.id}
@@ -136,27 +140,27 @@ function Menu(props) {
                 passData={item.passData}
               />
             ))} */}
-            <div className="w-full flex flex-row my-2 items-center bg-card rounded-2xl">
-              <div className="m-4 w-1/3">
-                <img className="" src={burger} alt="burger" />
+            <div className="p-2 w-full flex flex-row my-2 items-center bg-wh rounded-2xl">
+              <div className="p-2 w-1/3">
+                <img className="rounded-lg" src={burger} alt="burger" />
               </div>
-              <div className="flex flex-col px-2">
-                <div className="mt-3">
-                  <p className="font-semibold">Burger Burst</p>
+              <div className="flex flex-col w-full px-2">
+                <div className="">
+                  <p className="font-semibold text-lg">Burger Burst</p>
                   <p className="font-light whitespace-pre-line">Veggies and cheese to go MmmMmm!</p>
                 </div>
                 <div className="flex justify-between">
-                  <p className="font-medium text-xl">100</p>
+                  <p className="font-medium text-xl">₹‎100</p>
                   <div className="flex">
                     <button
-                      className="bg-orange text-wh px-2 text-3xl font-extrabold" id="1"
+                      className="font-bold text-xl" id="1"
                       onClick={HandleSubs}
                     >
                       -
                     </button>
                     <p className="font-medium pt-1 px-3 text-xl">{q1}</p>
                     <button
-                      className="bg-orange text-wh text-3xl px-1 font-extrabold" id="1"
+                      className="font-bold text-xl" id="1"
                       onClick={HandleAdd}
                     >
                       +
@@ -165,27 +169,27 @@ function Menu(props) {
                 </div>
               </div>
             </div>
-            <div className="w-full flex flex-row my-2 items-center bg-card rounded-2xl">
-              <div className="m-4 w-1/3">
-                <img className="" src={pizza} alt="burger" />
+            <div className="p-2 w-full flex flex-row my-2 items-center bg-wh rounded-2xl">
+              <div className="p-2 w-1/3">
+                <img className="rounded-lg" src={pizza} alt="burger" />
               </div>
-              <div className="flex flex-col px-2">
-                <div className="mt-3">
-                  <p className="font-semibold">Pizza</p>
+              <div className="flex flex-col w-full px-2">
+                <div className="">
+                  <p className="font-semibold text-lg">Pizza</p>
                   <p className="font-light whitespace-pre-line">Double cheese burst pizza</p>
                 </div>
                 <div className="flex justify-between">
-                  <p className="font-medium text-xl">150</p>
+                  <p className="font-medium text-xl">₹‎150</p>
                   <div className="flex">
                     <button
-                      className="bg-orange text-wh px-2 text-3xl font-extrabold" id="2"
+                      className="font-bold text-xl" id="2"
                       onClick={HandleSubs}
                     >
                       -
                     </button>
                     <p className="font-medium pt-1 px-3 text-xl">{q2}</p>
                     <button
-                      className="bg-orange text-wh text-3xl px-1 font-extrabold" id="2"
+                      className="font-bold text-xl" id="2"
                       onClick={HandleAdd}
                     >
                       +
@@ -194,27 +198,27 @@ function Menu(props) {
                 </div>
               </div>
             </div>
-            <div className="w-full flex flex-row my-2 items-center bg-card rounded-2xl">
-              <div className="m-4 w-1/3">
-                <img className="" src={pasta} alt="burger" />
+            <div className="p-2 w-full flex flex-row my-2 items-center bg-wh rounded-2xl">
+              <div className="p-2 w-1/3">
+                <img className="rounded-lg" src={pasta} alt="burger" />
               </div>
-              <div className="flex flex-col px-2">
-                <div className="mt-3">
-                  <p className="font-semibold">White Sauce pasta</p>
+              <div className="flex flex-col w-full px-2">
+                <div className="">
+                  <p className="font-semibold text-lg">White Sauce pasta</p>
                   <p className="font-light whitespace-pre-line">Veggies and cheese to go MmmMmm!</p>
                 </div>
                 <div className="flex justify-between">
-                  <p className="font-medium text-xl">200</p>
+                  <p className="font-medium text-xl">₹‎200</p>
                   <div className="flex">
                     <button
-                      className="bg-orange text-wh px-2 text-3xl font-extrabold" id="3"
+                      className="font-bold text-xl" id="3"
                       onClick={HandleSubs}
                     >
                       -
                     </button>
                     <p className="font-medium pt-1 px-3 text-xl">{q3}</p>
                     <button
-                      className="bg-orange text-wh text-3xl px-1 font-extrabold" id="3"
+                      className="font-bold text-xl" id="3"
                       onClick={HandleAdd}
                     >
                       +
@@ -223,27 +227,27 @@ function Menu(props) {
                 </div>
               </div>
             </div>
-            <div className="w-full flex flex-row my-2 items-center bg-card rounded-2xl">
-              <div className="m-4 w-1/3">
-                <img className="" src={burger} alt="burger" />
+            <div className="p-2 w-full flex flex-row my-2 items-center bg-wh rounded-2xl">
+              <div className="p-2 w-1/3">
+                <img className="rounded-lg" src={burger} alt="burger" />
               </div>
-              <div className="flex flex-col px-2">
-                <div className="mt-3">
-                  <p className="font-semibold">Choco lava cupcakes</p>
+              <div className="flex flex-col w-full px-2">
+                <div className="">
+                  <p className="font-semibold text-lg">Choco lava cupcakes</p>
                   <p className="font-light whitespace-pre-line">Oozing chocolate</p>
                 </div>
                 <div className="flex justify-between">
-                  <p className="font-medium text-xl">50</p>
+                  <p className="font-medium text-xl">₹‎50</p>
                   <div className="flex">
                     <button
-                      className="bg-orange text-wh px-2 text-3xl font-extrabold" id="4"
+                      className="font-bold text-xl" id="4"
                       onClick={HandleSubs}
                     >
                       -
                     </button>
                     <p className="font-medium pt-1 px-3 text-xl">{q4}</p>
                     <button
-                      className="bg-orange text-wh text-3xl px-1 font-extrabold" id="4"
+                      className="font-bold text-xl" id="4"
                       onClick={HandleAdd}
                     >
                       +
@@ -261,7 +265,7 @@ function Menu(props) {
             <div className="flex justify-between">
               <p className="font-medium text-xl">Total</p>
               <p className="font-medium text-xl text-orange">
-                ₹ {0.05 * total + total}{" "}
+              ₹‎ {0.05 * total + total}{" "}
               </p>
             </div>
           </div>
